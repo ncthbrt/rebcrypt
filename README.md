@@ -1,18 +1,12 @@
-# Basic Reason Template
+# Rebcrypt
 
-Hello! This project allows you to quickly get started with Reason and BuckleScript. If you wanted a more sophisticated version, try the `react` template (`bsb -theme react -init .`).
+This is a simple wrapper around [nobe bcrypt](https://github.com/kelektiv/node.bcrypt.js) for bucklescript and reason.
+Please reference the `__tests__` folder and `Recrypt.rei` for usage.  
 
-# Build
-```
-npm run build
-```
+# Getting Started
 
-# Build + Watch
+Install bs-express using npm:
 
-```
-npm run watch
-```
+```npm install --save @ncthbrt/rebcrypt```
 
-
-# Editor
-If you use `vscode`, Press `Windows + Shift + B` it will build automatically
+Then add @ncthbrt/rebcrypt as a dependency to bsconfig.json.
