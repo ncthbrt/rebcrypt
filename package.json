@@ -4,6 +4,9 @@
   "scripts": {
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
+    "test-watch": "jest --watch --coverage",
+    "test": "jest --coverage",
+    "postinstall": "yarn run build",
     "clean": "bsb -clean-world"
   },
   "keywords": [
@@ -12,6 +15,16 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "bs-platform": "^2.1.0"
+    "@glennsl/bs-jest": "^0.4.1",
+    "bs-platform": "^2.1.0",
+    "husky": "^0.14.3"
+  },
+  "dependencies": {
+    "bcrypt": "^1.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn run build && yarn run test"
+    }
   }
 }
