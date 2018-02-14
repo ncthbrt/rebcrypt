@@ -1,6 +1,6 @@
 # Rebcrypt
 
-This is a simple wrapper around [nobe bcrypt](https://github.com/kelektiv/node.bcrypt.js) for bucklescript and reason.
+This is a simple wrapper around [node bcrypt](https://github.com/kelektiv/node.bcrypt.js) for bucklescript and reason.
 Please reference the `__tests__` folder and `Recrypt.rei` for usage.  
 
 # Getting Started
