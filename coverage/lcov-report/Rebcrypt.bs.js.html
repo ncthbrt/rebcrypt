@@ -22,7 +22,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>27/27</span>
+        <span class='fraction'>20/20</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -37,7 +37,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>27/27</span>
+        <span class='fraction'>20/20</span>
       </div>
     </div>
   </div>
@@ -106,7 +106,15 @@
 61
 62
 63
-64</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+64
+65
+66
+67
+68
+69
+70
+71
+72</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -129,11 +137,17 @@
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -146,6 +160,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -153,17 +171,15 @@
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -174,11 +190,11 @@
 &nbsp;
 var Bcrypt = require("bcrypt");
 &nbsp;
-function genSaltSync($staropt$star, _) {
+function genSync($staropt$star, _) {
   return Bcrypt.genSaltSync($staropt$star ? $staropt$star[0] : 10);
 }
 &nbsp;
-function genSalt($staropt$star, _) {
+function gen($staropt$star, _) {
   return Bcrypt.genSalt($staropt$star ? $staropt$star[0] : 10);
 }
 &nbsp;
@@ -192,45 +208,53 @@ function hashAndSalt($staropt$star, data) {
   return Bcrypt.hash(data, rounds);
 }
 &nbsp;
-var Salt = [(function (prim) {
-      return prim;
-    })];
-&nbsp;
-var Hash = [(function (prim) {
-      return prim;
-    })];
-&nbsp;
-function hashSync(prim, prim$1) {
-  return Bcrypt.hashSync(prim, prim$1);
+function Salt_000(prim) {
+  return prim;
 }
 &nbsp;
-function hash(prim, prim$1) {
-  return Bcrypt.hash(prim, prim$1);
+var Salt = [
+  Salt_000,
+  genSync,
+  gen
+];
+&nbsp;
+function Hash_000(prim) {
+  return prim;
 }
 &nbsp;
-function compareSync(prim, prim$1) {
-  return +Bcrypt.compareSync(prim, prim$1);
-}
-&nbsp;
-function compare(prim, prim$1) {
-  return Bcrypt.compare(prim, prim$1);
-}
-&nbsp;
-function getRounds(prim) {
+function Hash_001(prim) {
   return Bcrypt.getRounds(prim);
 }
 &nbsp;
+function Hash_002(prim, prim$1) {
+  return Bcrypt.hashSync(prim, prim$1);
+}
+&nbsp;
+function Hash_003(prim, prim$1) {
+  return Bcrypt.hash(prim, prim$1);
+}
+&nbsp;
+function Hash_004(prim, prim$1) {
+  return +Bcrypt.compareSync(prim, prim$1);
+}
+&nbsp;
+function Hash_005(prim, prim$1) {
+  return Bcrypt.compare(prim, prim$1);
+}
+&nbsp;
+var Hash = [
+  Hash_000,
+  Hash_001,
+  Hash_002,
+  Hash_003,
+  Hash_004,
+  Hash_005
+];
+&nbsp;
 exports.Salt = Salt;
 exports.Hash = Hash;
-exports.genSaltSync = genSaltSync;
-exports.genSalt = genSalt;
-exports.hashSync = hashSync;
 exports.hashAndSaltSync = hashAndSaltSync;
-exports.hash = hash;
 exports.hashAndSalt = hashAndSalt;
-exports.compareSync = compareSync;
-exports.compare = compare;
-exports.getRounds = getRounds;
 /* bcrypt Not a pure module */
 &nbsp;</pre></td></tr>
 </table></pre>
@@ -238,7 +262,7 @@ exports.getRounds = getRounds;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Feb 14 2018 00:23:02 GMT+0200 (SAST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Feb 14 2018 00:42:14 GMT+0200 (SAST)
 </div>
 </div>
 <script src="prettify.js"></script>

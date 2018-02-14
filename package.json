@@ -1,13 +1,14 @@
 {
   "name": "@ncthbrt/rebcrypt",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "scripts": {
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
     "test-watch": "jest --watch --coverage",
     "test": "jest --coverage",
     "postinstall": "yarn run build",
-    "clean": "bsb -clean-world"
+    "clean": "bsb -clean-world",
+    "prepublish": "yarn run build && yarn run test"
   },
   "keywords": [
     "BuckleScript"
