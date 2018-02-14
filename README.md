@@ -5,7 +5,7 @@ Please reference the `__tests__` folder and `Recrypt.rei` for usage.
 
 # Getting Started
 
-Install bs-express using npm:
+Install rebcrypt using npm:
 
 ```npm install --save @ncthbrt/rebcrypt```
 
