@@ -1,15 +1,15 @@
 {
   "name": "@ncthbrt/rebcrypt",
   "description": " Bindings for bcrypt in Reason",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "scripts": {
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
     "test-watch": "jest --watch --coverage",
     "test": "jest --coverage",
-    "postinstall": "yarn run build",
+    "postinstall": "npm run build",
     "clean": "bsb -clean-world",
-    "prepublish": "yarn run build && yarn run test"
+    "prepublish": "npm run build && npm run test"
   },
   "repository": {
     "type": "git",
@@ -37,7 +37,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "yarn run build && yarn run test"
+      "pre-push": "npm run build && npm run test"
     }
   }
 }
