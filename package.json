@@ -1,6 +1,7 @@
 {
   "name": "@ncthbrt/rebcrypt",
-  "version": "1.0.1",
+  "description": " Bindings for bcrypt in Reason",
+  "version": "1.0.2",
   "scripts": {
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
@@ -10,9 +11,20 @@
     "clean": "bsb -clean-world",
     "prepublish": "yarn run build && yarn run test"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ncthbrt/rebcrypt.git"
+  },
   "keywords": [
-    "BuckleScript"
+    "reason",
+    "bucklescript",
+    "bcrypt",
+    "crypto"
   ],
+  "bugs": {
+    "url": "https://github.com/ncthbrt/rebcrypt/issues"
+  },
+  "homepage": "https://github.com/ncthbrt/rebcrypt#readme",
   "author": "",
   "license": "MIT",
   "devDependencies": {
