@@ -1,13 +1,12 @@
 {
   "name": "@ncthbrt/rebcrypt",
   "description": " Bindings for bcrypt in Reason",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "scripts": {
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
     "test-watch": "jest --watch --coverage",
     "test": "jest --coverage",
-    "postinstall": "npm run build",
     "clean": "bsb -clean-world",
     "prepublish": "npm run build && npm run test"
   },
