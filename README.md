@@ -18,7 +18,7 @@ Bcrypt is a widely used adaptive password hashing function which also includes a
 
 This library offers two ways of hashing a password. You can generate the salt separately and then hash the password by including the generated salt, or you can hash and salt the password at the same time. 
 
-The library provides both asynchronous and synchronous methods.
+The library provides both synchronous and asynchronous promise returning methods.
 
 ### Generating the Salt then Hashing
 ```reason
