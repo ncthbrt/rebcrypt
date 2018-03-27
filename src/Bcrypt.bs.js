@@ -11,6 +11,12 @@ function gen($staropt$star, _) {
   return Bcrypt.genSalt($staropt$star ? $staropt$star[0] : 10);
 }
 
+function compare(a, b) {
+  return Bcrypt.compare(a, b).then((function (x) {
+    return Promise.resolve(+x);
+  }));
+}
+
 function hashAndSaltSync($staropt$star, data) {
   var rounds = $staropt$star ? $staropt$star[0] : 10;
   return Bcrypt.hashSync(data, rounds);
@@ -51,17 +57,13 @@ function Hash_004(prim, prim$1) {
   return +Bcrypt.compareSync(prim, prim$1);
 }
 
-function Hash_005(prim, prim$1) {
-  return Bcrypt.compare(prim, prim$1);
-}
-
 var Hash = [
   Hash_000,
   Hash_001,
   Hash_002,
   Hash_003,
   Hash_004,
-  Hash_005
+  compare
 ];
 
 exports.Salt = Salt;
