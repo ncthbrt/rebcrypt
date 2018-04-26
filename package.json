@@ -1,7 +1,7 @@
 {
   "name": "@ncthbrt/rebcrypt",
   "description": " Bindings for bcrypt in Reason",
-  "version": "1.0.6",
+  "version": "2.0.0",
   "scripts": {
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
@@ -32,7 +32,7 @@
     "husky": "^0.14.3"
   },
   "dependencies": {
-    "bcrypt": "^1.0.3"
+    "bcrypt": "^2.0.1"
   },
   "husky": {
     "hooks": {
