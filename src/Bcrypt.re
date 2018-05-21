@@ -16,11 +16,8 @@ module Hash = {
   [@bs.module "bcrypt"]
   external make : (string, string) => Js.Promise.t(string) = "hash";
   [@bs.module "bcrypt"]
-  external compare_ : (string, string) => Js.Promise.t(Js.boolean) =
-    "compare";
-  let compare = (a, b) =>
-    compare_(a, b)
-    |> Js.Promise.then_(x => Js.Promise.resolve(Js.to_bool(x)));
+  external compare_ : (string, string) => Js.Promise.t(bool) = "compare";
+  let compare = (a, b) => compare_(a, b);
   [@bs.module "bcrypt"]
   external compareSync : (string, string) => bool = "compareSync";
   [@bs.module "bcrypt"] external getRounds : string => int = "getRounds";
